@@ -520,7 +520,9 @@
 -- Fim do módulo 6
 
 -- Início do módulo 7: Criando uma Biblioteca Wrapper da API do Spotify
-  Aula 088 - Introdução da Biblioteca 
+  Aula 088 - Introdução da Biblioteca
+    * Api do Spotify: https://developer.spotify.com/web-api/
+    * Spotify Console: https://beta.developer.spotify.com/console/
 -- Fim do módulo 7
 
 -- Início do módulo 8: Refatorando uma Biblioteca com Testes
