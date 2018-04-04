@@ -1,0 +1,23 @@
+# funcionar para todos os editores
+root = true
+
+# olhar para todos os arquivos
+[*]
+
+# space | tabs
+indent_style = space
+
+# tamanho de espaçamento
+indent_size = 2
+
+# definir o fim de linha
+end_of_line = lf
+
+# não preciso falar
+charset = utf-8
+
+# apague todos os espaços vazios que não sejam úteis
+trim_tralling_whitespace = true
+
+# inserir uma linha no final do arquivo
+insert_final_newline = true

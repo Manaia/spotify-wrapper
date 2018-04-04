@@ -1,36 +1,48 @@
-/*
-  Desafio Fizzbuzz
+import chai, { expect } from 'chai';
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import sinonStubPromise from 'sinon-stub-promise';
+chai.use(sinonChai);
+sinonStubPromise(sinon);
 
-  Escreva uma lib que receba um número e:
+global.fetch = require('node-fetch');
 
-  Se o número for divisível por 3, no lugar do número escreva 'Fizz' - Done
-  Se o número for divisível por 5, no lugar do número escreva 'Buzz' - Done
-  Se o número for divisível por 3 e 5, no lugar do número escreva 'FizzBuzz' - Done
-  Se não for múltiplo de nada, retorna o número
+import { search, searchAlbuns, searchArtists, searchTracks, searchPlaylists } from '../src/main';
 
-*/
+describe('Spotify Manager', () => {
+  describe('Smoke Tests', () => {
+      // search (genérico) de + de um tipo
+      // searchAlbuns
+      // searchArtists
+      // searchTracks
+      // searchPlaylists
+      it('should exists the search method', () => {
+        expect(search).to.exist;
+      });
 
-import { expect } from 'chai';
-import FizzBuzz from '../src/main';
+      it('should exists the searchAlbuns method', () => {
+        expect(searchAlbuns).to.exist;
+      });
 
-describe('FizzBuzz', () => {
-  it('should return `Fizz` when multiple of 3', () => {
-    expect(FizzBuzz(3)).to.be.equal('Fizz');
-    expect(FizzBuzz(6)).to.be.equal('Fizz');
+      it('should exists the searchArtists method', () => {
+        expect(searchArtists).to.exist;
+      });
+
+      it('should exists the searchTracks method', () => {
+        expect(searchTracks).to.exist;
+      });
+
+      it('should exists the searchPlaylists method', () => {
+        expect(searchPlaylists).to.exist;
+      });
   });
-  it('should return `Buzz` when multiple of 5', () => {
-    expect(FizzBuzz(5)).to.be.equal('Buzz');
-    expect(FizzBuzz(10)).to.be.equal('Buzz');
-  });
-  it('should return `FizzBuzz` when multiple of 3 and 5', () => {
-    expect(FizzBuzz(15)).to.be.equal('FizzBuzz');
-    expect(FizzBuzz(30)).to.be.equal('FizzBuzz');
-  });
-  it('should return the number when non-multiple', () => {
-    expect(FizzBuzz(7)).to.be.equal(7);
-  });
 
-  it('should return 0 when 0', () => {
-    expect(FizzBuzz(0)).to.be.equal(0);
+  describe('Generic Search', () => {
+    it('should call fetch function', () => {
+      const fetchedStub = sinon.stub(global, 'fetch');
+      const artists = search();
+
+      expect(fetchedStub).to.have.been.calledOnce;
+    })
   });
 });

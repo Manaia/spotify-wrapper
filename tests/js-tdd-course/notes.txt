@@ -520,9 +520,52 @@
 -- Fim do módulo 6
 
 -- Início do módulo 7: Criando uma Biblioteca Wrapper da API do Spotify
+
   Aula 088 - Introdução da Biblioteca
     * Api do Spotify: https://developer.spotify.com/web-api/
     * Spotify Console: https://beta.developer.spotify.com/console/
+
+  Aula 089 - Clonando e editando o Boilerplate
+    * Clonou-se o repositório inicial do curso com as configurações prontas
+    * Criei um novo repositório para trabalhar com o Wrapper - https://github.com/Manaia/spotify-wrapper.git
+
+  Aula 090 - Criando Smoke Tests
+    * Criando smoke tests para os métodos
+      * search (genérico),searchAlbuns, searchArtists, searchTracks
+        searchPlaylists
+
+  Aula 091 - Instalando Sinon e dependências
+    * Dependencias instaladas:
+      * sinon, sinon-chai, sinon-stub-promise, node-fetch
+
+  Aula 092 - Utilizando o calledOnce
+    * Configuramos o ambiente de testes com as novas dependencias instaladas
+      para utilizar as requisições
+
+  Aula 093 - Utilizando o calledWith
+    *
+
+  Aula 094 - Utilizando context e Refatorando Código Teste
+    *
+
+  Aula 095 - Retornando Promises
+    *
+
+  Aula 096 - Escrevendo Testes para Métodos Restantes
+    *
+
+  Aula 097 - Rodando um Exemplo no Node
+    *
+
+  Aula 098 - Criando Arquivos para o Endpoint de Albuns
+    *
+
+  Aula 099 - Refatorando e Reorganizando o código
+    *
+
+  Aula 100 - Transpilando a Biblioteca com Babel
+
+
 -- Fim do módulo 7
 
 -- Início do módulo 8: Refatorando uma Biblioteca com Testes
