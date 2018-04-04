@@ -1,0 +1,536 @@
+-- Início do módulo 1: Boas Práticas
+  Aula 002 - Configuração do NPM
+    Npm - https://www.npmjs.com
+    * configurar npm: https://docs.npmjs.com/misc/config
+    * configurações default, ex: npm set init-author-name "Arthur Manaia"
+    * add user para linkar o projeto com o seu npm: npm adduser
+    * inicializando a biblioteca no projeto: npm init
+
+  Aula 003 - Criando o gitignore
+    Gitignore - https://www.npmjs.com/package/gitignore
+    * instalação: npm install gitignore -g
+    * listar todos os projetos disponíveis para a utilização do gitignore: gitignore -types
+    * adicionar o projeto: gitignore Node
+
+  Aula 004 - Criando arquivos para documentação
+
+   Arquivos para documentação - readme, license, contributing (se for open source)
+    * Repositório de boas práticas para documentação: https://github.com/matiassingers/awesome-readme
+    * Repositório do instrutor para levar como exemplo: https://github.com/lyef/lyef-react-component
+    * Repositório com um template bacana de readme: https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+    * Licença: https://opensource.org/
+      - https://opensource.org/licenses
+      - MIT: https://opensource.org/licenses/MIT
+    * Contribuição: https://github.com/lyef/lyef-react-component/blob/master/CONTRIBUTING.md
+
+  Aula 005 - Padrões de código: styleguide
+
+    Airbnb - padrões de código
+      * https://github.com/airbnb/javascript
+
+    Standard - pardrões de código
+      * https://github.com/standard/standard
+
+    Idiomatic - padrões de código
+      * https://github.com/rwaldron/idiomatic.js
+
+    Jscs - padrões de código
+      * jscs.info
+
+    Eslint - padrões de código: criar regras e fazer leitura delas pelos arquivos
+      * eslint.org
+
+  Aula 006 e 007 - instalando e usando o eslint
+
+    Eslint - https://eslint.org/
+      * integrações com editores de texto: https://eslint.org/docs/user-guide/integrations
+      * Passo a passo:
+          - npm install eslint --save-dev
+          - ./node_modules/.bin/eslint --init
+          - ./node_modules/.bin/eslint pasta_do_js/*.js
+
+  Aula 008 - Configurando o EditorConfig
+
+    Editorconfig - http://editorconfig.org/
+      * Configurando o editor de texto. Ex: identação
+      * plugin necessário para o editor config
+
+  Aula 009 - Criando um npm scripts
+    * Ex de um scripts
+      - Em package.json no objeto "scripts" a chave será o nome do comando e o valor será o comando
+      - Ex: "lint": "./node_modules/.bin/eslint src/*.js"
+      - Em seguida no terminal, rode o comando npm run lint
+
+  Aula 010 - Configurando hooks no git
+
+   Husky - alguns scripts que rodam antes de alguma tarefa
+    * Projeto no github: https://github.com/typicode/husky
+    * Lista de comandos: https://github.com/typicode/husky/blob/master/HOOKS.md
+-- Fim do módulo 1
+
+-- Início do módulo 2: Aprendendo ES6
+  Aula 011      - Introdução ao EcmaScript 6
+    * Features: http://es6-features.org/#Constants
+    * Tabela de compatibilidade: https://kangax.github.io/compat-table/es6/
+    * Leitura sobre es6
+      - inglês: https://ponyfoo.com/articles/tagged/es6-in-depth
+      - pt-br: https://nipher.io
+
+  Aula 012-2.1  - Escopo do JS
+    * nesta aula, foi abordado o escopo do js. Tiveram exemplo de declaração de variáveis
+      usando a palavra chave 'var' em escopos diferentes, demonstrando o comportamento em situações específicas
+    * o 'var' é global  a não ser que estejam dentro de funções
+    * as variáveis feitas com 'var' são chamadas 'function scoped', são variáveis que tem o escopo somente dentro de funções ou são globais
+
+  Aula 013-2.2  - Variável let no JS
+    * nesta aula, foi abordado a palavra chave 'let'. Tiveram exemplos de declaração de variáveis
+      usando a palavra chave 'let' e 'var' em escopos diferentes, para demonstrar o comportamento de ambos em situações específicas.
+    * uma das características do let é a declaração de variáveis em um escopo, e não correr o risco dessa variável ser reescrita em outro escopo.
+      Então você garante que ela ficará presa apenas naquele escopo.
+
+  Aula 014-2.3  - Variável const no JS
+    * nesta aula, foi abordado a palavra chave 'const'. Tiveram exemplos de declaração de variáveis usando a palavra chave,
+      com ênfase na afirmação que o const faz com que a variável fique imutável, mas não é bem assim.
+
+    * a palavra chave const, faz com que a variável seja constante, não sendo possível reatribuir algum outro valor.
+      Porém, em um dos exemplos na aula, se for criado um objeto usando 'const', é possível reatribuir os valores das propriedade
+      desse objeto. Mas reatribuir o objeto em si, não é possível.
+
+  Aula 015-2.4  - Temporal Dead Zone
+    * nesta aula, foi abordado o tema temporal dead zone. Que nada mais é, uma referenciar uma variável, sem mesmo ter atribuído algum valor a ela antes.
+
+    * se a palavra chave for 'var', a mensagem será 'undefined', pois o js faz algo chamado 'hosting', cuja a função é,
+      pegar todas as variáveis declaradas que tem no corpo do js atribuir tudo em cima como se fosse global, já
+      que está sendo utilizado o 'var'.
+
+    * se for let ou const, o erro será diferente, pois quando se utiliza uma dessas palavras chaves, ele não fará o mesmo host
+      como se faz no 'var', ele vai ignorar, não permitindo que seja criada um variável sem atribuição. Isso é útil pq assim a gente consegue ver que estamos chamando valores antes mesmo de serem atribuídos.
+
+  Aula 016-3.1  - Introdução ao Arrow Function
+    * arrow function é uma feature do es6. Uma expressão arrow function possui uma sintaxe mais curta do que uma função anônima do es5, por exemplo.
+
+    * por ela ter uma sintaxe mais curta, ela tem como característica inicial, sua simplicidade na hora da leitura de código,
+      o encadeamento de funções também fica bem mais simples
+
+  Aula 017-3.2  - Arrow Function e o Lexical This
+
+    * nesta aula foi abordado o elemento this do javascript.
+
+    * o this do arrow function pega o contexto de onde ele está e não do contexto como um todo
+
+    * é recomendado usar arrow function dentro de outras funções, para manipular as propriedades do objeto
+      no contexto que a função está
+
+  Aula 018-4.1  - Introdução a Template Literals
+    * template literal tem a função de criar strings com variaveis internas e concatena-las com mais praticidade
+
+    * na aula foi mostrado como utilizar o template em uma string linear utilizando variáveis
+      e também utilizando a quebra de linha
+
+  Aula 019-4.2  - Usando Template Literals Para HTML Fragments
+    * criando fragmentos de HTML utilizando JS
+    * na aula foi criado um fragmento de HTML utilizando o template literal,
+      no caso, foi utilizado funções, variáveis e as próprias tags em HTML.
+
+  Aula 020-4.3  - Tagged Template
+    * utilizando uma função na frente do texto e fazer modificações em cima dele
+    * nessa aula houve a:
+      * utilização da expressão "debugger"
+      * utilização da feature de parâmetros do es6 chamada rest: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters
+      * utilização da função reduce() do js
+
+  Aula 021-5.1  - Shorthand Properties
+    * na aula foi mostrado a utilização do shorthand Properties presente no es6
+    * tiveram dois exemplos: uma alternativa de atribuir um valor a uma propriedade de um objeto
+      e atribuir um função a um objeto
+
+  Aula 022-5.2  - Default Parameters
+    * uma adição dentro do es6, para setar um parâmetro padrão dentro de uma função
+    * bastante útil para evitar o famoso 'undefined'
+
+  Aula 023-5.3  - Novos Métodos Para Strings
+    * Métodos para se trabalhar com strings es6
+      - startsWith() -> verifica o ínicio da string retornando um booleano
+      - endsWith()   -> verifica o final da string retornando um booleano
+      - includes()   -> verifica se existe uma string a partir de uma string
+      - repeat()     -> repete uma string n vezes
+
+  Aula 024-6.1  - Array.from()
+    * faz com que o elemento tenha características de um Array
+      tendo acesso a todos os métodos que um array contém
+
+    * foi mostrado também como transformar uma string em um array
+
+  Aula 025-6.2  - Array.of()
+    * Criar um array a partir de certos elementos
+    * Bastante útil para quando precisamos juntar vários elementos diferentes e inseri-los em um array
+
+  Aula 026-6.3  - Array.find() e Array.findIndex()
+    * Array.find() - procura um dado dentro de um array e quando acha, ele retorna aquele elemento e termina a função
+    * Array.findIndex() - procura um índice de um array e retorna o índice
+    * Bastante poderosos para buscar um determinado elemento dentro de um array passado por uma api, por exemplo.
+
+  Aula 027-6.4  - Array.fill()
+    * Array.fill() - insere um dado dentro de um array, sendo possível passar dois parâmetros para delimitar
+      a posição em que o dado será colocado,sendo o primeiro, o índice inicial onde o elemento será inserido e, o segundo,]
+      o índice final menos 1 até onde o elemento será inserido
+
+  Aula 028-7.1  - Introdução ao Destructuring
+
+    * Destructuring é uma feature para pegar valores de arrays ou objetos
+      com mais praticidade e com algumas linhas de código
+
+  Aula 029-7.2  - Destructuring em Arrays
+    * Destructuring usando arrays, segue a mesma linha utilizando objetos,
+      a diferença é que utilizando o array, a semântica fica [] em vez de {}
+
+  Aula 030-7.3  - Fazendo Swap de Variveis com Destructuring
+    * Como fazer swap de variáveis em apenas uma linha utilizando Destructuring
+    * Na aula foi mostrado dois métodos de fazer o swap, utlizando o Destructuring e não utilizando o Destructuring
+    * Ex: [ a, b ] = [b, a]
+
+  Aula 031-8.1  - Introdução ao Spread Operator
+    * Breve introdução da feature Spread
+    * Houve exemplos usando o Spread, sendo eles, concatenar dois array, separar cada elemento de uma string
+      e inseri-los em um array, separar os elementos do array e strings, e etc.
+
+  Aula 032-8.2  - Usando o Spread Dentro de Funções
+    * Foi mostrado um exemplo utilizando spread em funções, passando como argumento um array e alocando cada
+      elemento daquele Array nos argumentos da função.
+
+  Aula 033-8.3  - Rest Params
+    * Rest Params é muito semelhante ao Spread Operator
+    * O rest params é muito útil quando não sabemos quantos argumentos a função terá
+  Aula 034-9.1  - Introdução a Promises
+    * Promise é um objeto com uma ação que não foi finalizada, mas que será finalizada de alguma forma
+    * Promise é importante para se trabalhar com dados assíncronos e evita o callback hell (callback, dentro de callback)
+    * Usou-se dois métodos para tratar o dado da promise, sendo eles o then() e o catch()
+  Aula 035-9.2  - Exemplo Real de Promises
+    * Realizando uma requisição para o servidor e fazendo uma promise para realizar ações quando ela estivesse pronta
+    * Há três status promises: pending, resolved, rejected
+    * Fizemos testes verificando cada status da promise
+  Aula 036-9.3  - Manipulando Multiplas Promises
+    * Dois métodos estáticos da Promise: all() e race()
+    * all()  - recebe uma lista de todas as promises que for passada e as resolved
+    * race() - recebe uma lista de todas as promises que for passada e a partir da primeira
+      promise que for resolvida, é ignorado todo o resto. Útil quando está trabalhando com diversas
+      requisições mas a primeira que for realizada, é a mais importante.
+  Aula 037-10.1 - Herança Prototipal
+    * Um exemplo de uma classe construtora, com um método prototipal
+    * Foi criada uma classe contrutora a declaração de duas propriedades,
+      depois foi criada uma referência para o objeto e criou-se um método
+      prototipal
+  Aula 038-10.2 - Criando Classes do ES6
+    * Criou-se uma classe usando ES6, com um método contrutor, um método estático,
+      um método comum, um getter e setter.
+
+  Aula 039-10.3 - Usando Extended Classes
+    * Uma classe que extende de uma outra classe principal, onde essa classe que vai extender
+      herda TUDO da classe extendida
+    * Foi utilizado a palavra chave super() para primeiro construir a classe
+      extendida para depois utiliza-lo na classe que está extendendo
+  Aula 040-11.1 - Introdução a Symbols
+    * Symbols tem a utilidade de fazer com que algum elemento seja único e imutável
+    * Pode ser útil para fazer com que algum elemento não seja reescrito em algum outro lugar
+    * Um Symbol é único, mesmo com os nomes iguais, ele é único
+  Aula 041-11.2 - Iterators e Iterables for...of
+    * Iterators e Iterables são protocolos novos do JS que permite interar sobre um informação
+    * Elementos que pode se iterar são chamados de Iterables
+    * Iterators são os métodos que serão utilizados para percorrer cada elemento iterable
+  Aula 042-12.1 - Introdução a Generators
+    * Generators é uma feature muito semelhante aos interables
+    * Para criar um Generator, é necessário incluir um '*' depois da palavra chave 'function'
+    * Ele tem uma palavra chave chamada 'yield', muito similar ao return
+    * Ele é muito útil para se trabalhar com fluxos
+  Aula 043-12.2 - Usando Generators Para Fluxos Assíncronos
+    * Trabalhando com Generators em fluxos ajax (assíncronos)
+    * Foi-se trabalhado o conceito de fluxos em cima de requisições ajax,
+      no momento que uma requisição terminasse, executaria outra logo em seguida
+      utilizando Generator
+  Aula 044-13.1 - Introdução ao Proxy
+    * Proxy é uma forma de definir comportamentos diferentes para métodos dentro de um objeto
+    * Foi criado dois métodos dentro do objeto, get() e set()
+      get() - capturava a propriedade do objeto que estava sendo chamado e imprimia-o
+      set() - inseria um novo valor a propriedade que estava sendo trabalhado naquele momento
+    * O proxy é um intermediário, que irá supervisionar as ações que estão sendo executadas no momento,
+      com a ajuda dos métodos criados
+  Aula 045-14.1 - Introdução ao Set
+    * Set é muito similar a um array, mas ele não trabalha com índices,
+      para buscar algum elemento presente no set, utiliza-se o nome do elemento para filtrar
+    * Todos os elemetos presente no set são únicos e não são repetíveis
+    * Foram apresentados alguns métodos do set, add(), delete() e has()
+    * O set pode ser um iterator para percorrer os elementos dele
+  Aula 046-14.2 - Introdução ao Weakset
+    * WeakSet é mais limitado do que o Set
+    * Ele só recebe objetos, diferente do Set que recebe além de objetos, tipo primitivos
+    * WeakSet não é um iterator, portanto não tem como fazer um for...of
+  Aula 047-15.1 - Introdução ao Map
+    * Muito similar ao Set, mas ele trabalha com chave e valor
+    * Também é um iterator, mas ele retorna apenas o valor do map e descarta a chave
+  Aula 048-15.2 - Introdução ao WeakMap
+    * Semelhante ao WeakSet e ao Map
+    * Obs do WeakSet e do WeakMap: quando se tem uma referência de algum elemento,
+      e essa referência é apagada do escopo do script, todas as referências declaradas
+      também desaparecem, economizando memória do computador
+-- Fim do módulo 2
+
+-- Início do módulo 3: Atualizações ES7 e ES8
+  Aula 049 - Introdução ao Async/Await
+    - async/await funciona obrigatoriamente no protocolo de Promises
+    - async é uma palavra chave usada no início de uma função
+    - await é usado para avisar a função para esperar o resultado da Promise
+    - await só pode ser usado para uma função com async
+    - async/await já está funcionando em quase todos os Browsers e NodeJS
+-- Fim do módulo 3
+
+-- Início do módulo 4: Módulos em Javascript
+  Aula 058 - Introdução a Módulos em JS
+    * https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc
+    * Módulos são pequenos trechos de códigos ou auto contidos, que tivesse alguma funcionalidade, onde conseguimos
+      separar dentro daquele módulo toda a responsabilidade dele, específico para fazer alguma função.
+
+  Aula 059 - Configurando o Webpack
+    * Webpack (https://webpack.js.org): é um bundler que tem a função de unir os módulo no javascript e carrega-los em nosso browser
+    * Babel (https://babeljs.io/): é um transpiler que pega o código js e traduzir para uma versão mais antiga para o browser interpretar
+    * Instalando webpack e o babel no projeto: npm install --save-dev webpack babel-loader babel-core babel-preset-env
+    * Todas as funções do webpack: ./node_modules/.bin/webpack --help
+
+  Aula 060 - Trabalhando com Imports no ES6
+    * Métodos de importar bibliotecas usando ES6
+    * Sintaxe: import método from 'biblioteca'
+
+  Aula 061 - Trabalhando com Exports no ES6
+    * Exports tem como objetivo, exportar métodos ou variáveis para que outros arquivos consigam utiliza-los
+    *
+  Aula 062 - UglifyJS no Webpack
+    * UglifyJS é um método presente no webpack, cuja a função é minificar o projeto para ele ficar menor.
+    * Ele é configurado no arquivo webpack.config.js
+
+  Aula 063 - Variveis de Ambiente no Webpack
+    * Foi mostrado como criar variáveis no webpack
+    * Criou-se então uma variável para verificar se o projeto está
+      no ambiente de desenvolvimento ou de produção quando desse um
+      npm run build
+
+  Aula 064 - Adicionando Sourcemaps em Nosso Código
+    * Sourcemaps são ferramentas para facilitar o debug. Como o arquivo está todo comprimido
+      fica difícil achar um erro, source map facilita nessa parte.
+    * Na aula foi visto três tipo de Sourcemaps
+      * cheap-eval-source-map: mais simples e leve
+      * eval-source-map: meio termo de simplicidade e leveza
+      * source-map: o mais completo dentre os três
+    * Obs: devtool: cheap-eval-source-map || eval-source-map || source-map;
+
+  Aula 065 - Inicializando um Server com Webpack
+    * Criando um servidor usando o webpack dev server
+-- Fim do módulo 4
+
+-- Início do módulo 5: Teoria de Testes
+  Aula 066 - Qualidade de Software
+    * Link dos slides: https://willianjusten.com.br/js-tdd-slides
+    * Link do artigo escrito por MCCall sobre Qualidade: https://people.dsv.su.se/~joco2917/ft_gateway11.cfm.pdf
+
+  Aula 067 - Alguns Fatores para Alcançar Qualidade em seu Projeto
+    * Nesta aula, foi abordada algumas práticas em relação a ter uma boa Qualidade
+      no desenvolvimento do projeto
+    * o Material usado na aula, foi os slides da aula 066 - Qualidade de Software
+
+  Aula 068 - Por que Testar?
+    * Nesta aula, foi abordada alguns pontos cruciais referente a testes,
+      onde teremos muito desempenho e qualidade se adotarmos essa prática.
+
+    * o Material usado na aula, foi os slides da aula 066 - Qualidade de Software
+
+  Aula 069 - Como Funciona o Fluxo do TDD?
+    * Link sobre um post de TDD: https://willianjusten.com.br/entendendo-testes-de-software/#tdd
+    * O TDD é dividido em três pequenas etapas:
+      * Escrever o teste que irá falhar (de uma forma burra)
+      * Fazer o código que irá fazer o teste funcionar
+      * Refatoração caso há necessidade, eliminando as redundâncias
+    * Fluxo do teste
+      * Escrever o teste
+      * Escrever o código para o teste passar
+      * Escrever um segundo caso de teste
+      * Corrigir o código para que passe
+      * Escrever um terceiro caso de teste (se necessário)
+      * Refatorar o todo o código (para garantir o funcionamento do código)
+
+    * o Material usado na aula, foi os slides da aula 066 - Qualidade de Software
+
+  Aula 070 - Como pensar em testes? Padrão de teste.
+    * Pensando como testar
+      * O que o código precisa fazer?
+      * Que dados ele recebe?
+      * Que dados ele precisa retornar?
+      * Que ações precisam acontecer para o código rodar?
+    * Padrão de teste
+      * "Ele deve fazer isso quando aquilo"
+
+    * o Material usado na aula, foi os slides da aula 066 - Qualidade de Software
+
+  Aula 071 - Tipos de testes
+    * Teste unitário
+      * são testes de responsabilidade única
+    * Teste de Serviço / Integração
+      * são teste de um componente, cujo os testes unitários já foram realizados
+        nos métodos que compõe o componente
+      * esses componentes tem como objetivo, realizar uma chamada ao banco ou
+        api, por exemplo
+    * Teste de UI
+      * testes para verificar a interação com o usuário
+      * testes de regreção quando é feita uma mudança de js ou css, por exemplo
+
+    * o Material usado na aula, foi os slides da aula 066 - Qualidade de Software
+
+  Aula 072 - Algumas dicas para os tipos de testes
+    * Teste unitário
+      * Evitar ruído entre os testes (Isolamento)
+      * Escolha os melhores asserts para cada momento
+      * Procure usar Mocks para chamadas externas
+      * Utilize o teste para organizar o design do código
+    * Teste de Integração
+      * É um teste para validar se os componentes estão funcionando em conjunto
+      * Cuidado para não criar um teste inútil
+      * Isole o máximo possível dos ambientes
+    * Testes de Aceitação (E2E)
+      * O teste tem como propósito avaliar a qualidade externa do produto e
+        também a qualidade em uso
+      * Valide apenas o fluxo de funcionamento do projeto
+
+    * o Material usado na aula, foi os slides da aula 066 - Qualidade de Software
+
+  Aula 073 - Spies, Stubs e Mocks
+    * Spies
+      * Vigiar informações sobre chamadas de funções (métodos)
+      * São úteis para testar callbacks e como métodos são usados dentro do sistema
+
+    * Stubs
+      * São como os spies, exceto por eles substituirem a função alvo
+      * Controlar comportamento de um teste: forçar excessão
+      * Pular uma parte não necessária do códigos
+      * Simplificar o teste de códigos assíncronos
+
+    * Mocks
+      * são métodos falsos com comportamento pré-programado e
+        resposta/expectations pré-programados
+      * Devem ser primariamente utilizados quando você precisa de um Stub,
+        mas precisa verificar múltiplos comportamentos num específico ponto
+
+
+    * o Material usado na aula, foi os slides da aula 066 - Qualidade de Software
+-- Fim do módulo 5
+
+-- Início do módulo 6: Unindo Conceitos na Prática
+
+  Aula 074 - Apresentando ferramentas
+    * MochaJS    - https://mochajs.org/
+    * ChaiJS     - chaijs.com
+    * SinonJS    - http://sinonjs.org/
+    * IstanbulJS - https://istanbul.js.org/
+    * NYC        - https://github.com/istanbuljs/nyc/
+
+  Aula 075 - Iniciando a estrutura com Mocha e Chai
+    * Criando a estrutura de testes
+      * npm install --save-dev mocha chai
+      * Criando a pasta tests/main.spec.js
+      * Script de teste no npm: ./node_modules/.bin/mocha tests/**/*.spec.js
+
+  Aula 076 - Funcionamento do Mocha - describe, context, it
+    * describe: descrever os testes de uma certa função/método
+    * context: é o contexto da ação de cada método
+    * it: é o teste que de fato será feito
+
+  Aula 077 - Reporters do Mocha
+    * Reporters é um jeito de informar como os testes estão passando
+    * script: npm test -- --reporters
+
+  Aula 078 - Comandos Skip, Only, Bail
+    * Skip: it.skip()
+      * Pula um trecho do teste
+    * Only: context.only()
+      * Roda apenas um bloco específico
+    * Bail: npm test -- --bail
+      * para o teste no primeiro erro que encontrar
+
+  Aula 079 - Introdução aos Hooks do Mocha
+    * before () - roda uma ação antes do bloco
+    * after () - roda uma ação depois do bloco
+    * beforeEach () - roda uma ação toda vez, antes de CADA bloco
+    * afterEach () - roda uma ação toda vez, depois de CADA bloco
+    * Ciclo dos hooks nessa situação acima
+      * before
+      * beforeEach
+      * test 1
+      * afterEach
+      * beforeEach
+      * test 2
+      * afterEach
+      * after
+
+  Aula 080 - Hooks na Prática
+    * Fazendo um caso de testesd utilizando os hooks
+    * Dicas: criar a variavel no escopo. No beforeEach,
+             inserir o valor para os testes utilizarem sem haver
+             conflito
+
+  Aula 081 - Métodos do Chai
+    * Chai é responsável por cada bloco it(), ou seja, pelos testes.
+    * Documentação API: http://www.chaijs.com/api/bdd/
+    * fazendo testes utilizando o expect do chai
+    * smoke test
+
+  Aula 082 - Criando uma Calculadora Simples Parte 1
+    * Primeiramente foi criado uma nova branch chamada calc para se trabalhar
+    * Iniciando o ciclo de teste, fizemos o smoke tests
+
+  Aula 083 - Criando uma Calculadora Simples Parte 2
+    * Fazendo testes nos métodos de operações básicas da calculadora
+    * Refatorando código
+
+  Aula 084 - Convertendo e testando em ES6
+    * Instalando o transpiler babel-preset-env babel-register
+    * Reescrevendo os códigos já feitos para ES6
+    * Alterando um pouco o package.json
+    * Incluindo o arquivo chamado .babelrc
+
+  Aula 085 - Criando um FizzBuzz com TDD
+    * Criou-se uma mini lib para realizar testes com um escopo definido inicial
+      * Se o número for divisível por 3, no lugar do número escreva 'Fizz' - Done
+      * Se o número for divisível por 5, no lugar do número escreva 'Buzz' - Done
+      * Se o número for divisível por 3 e 5, no lugar do número escreva 'FizzBuzz' - Done
+      * Se não for múltiplo de nada, retorna o número
+
+  Aula 086 - Aplicando o Code Coverage
+    * utilizando a lib chamada 'nyc' para fazer o code coverage
+    * npm install --save-dev nyc
+    * O code coverage vai analizar todos os pedaços do código que foi testada
+      ou seja, analizar se aquele teste já rodou aquele trecho de código
+    * Quando se usa o nyc ele cria uma tabela com algumas informações
+      * File: seria os arquivos que ele testou
+      * Statements: são basicamente as linhas que estão rodando e testando
+      * Branches: se os blocos estão realmente sendo testados (if, else, etc);
+      * Functions: são as funções que está sendo testada
+      * Lines: são as linhas estão sendo cobertas
+
+  Aula 087 - Rodando o Check-Coverage Antes de cada Push
+    * Uma nova utilidade do code coverage
+    * Adicionando ao prepush hook, uma verificação para realizar os testes
+      e se tiver com um coverage de mais de 80%, passar o teste e realizar
+      o push
+-- Fim do módulo 6
+
+-- Início do módulo 7: Criando uma Biblioteca Wrapper da API do Spotify
+  Aula 088 - Introdução da Biblioteca 
+-- Fim do módulo 7
+
+-- Início do módulo 8: Refatorando uma Biblioteca com Testes
+-- Fim do módulo 8
+
+-- Início do módulo 9: Criando um Player do Spotify
+-- Fim do módulo 9
+
+-- Início do módulo 10: Criando uma CLI para Converter Bitcoin em Qualquer Moeda
+-- Fim do módulo 10
+
+-- Início do módulo 11: Introdução a Teste com React Criando um Componente Full Header
+-- Fim do módulo 11
