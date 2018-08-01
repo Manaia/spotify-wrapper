@@ -6,9 +6,9 @@ chai.use(sinonChai);
 sinonStubPromise(sinon);
 global.fetch = require('node-fetch');
 
-import { search, searchAlbums, searchArtists, searchTracks, searchPlaylists } from '../src/main';
+import { search, searchAlbums, searchArtists, searchTracks, searchPlaylists } from '../src/search';
 
-describe('Spotify Manager', () => {
+describe('Search', () => {
   let fetchedStub, promise;
 
   beforeEach(() => {

@@ -581,8 +581,8 @@
      - verificar se o fetch ocorre com a url desejada
      - verificar se o dado é recebido pela Promise
   Aula 099 - Refatorando e Reorganizando o código
-    *
-
+    * Criando um arquivo para as config da API, um arquivo para as utilidades e para a importação de todos os endpoints
+    
   Aula 100 - Transpilando a Biblioteca com Babel
 -- Fim do módulo 7
 
