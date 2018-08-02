@@ -584,6 +584,16 @@
     * Criando um arquivo para as config da API, um arquivo para as utilidades e para a importação de todos os endpoints
     
   Aula 100 - Transpilando a Biblioteca com Babel
+    * Se possível, criar outros endpoints para consumir a API (dever de casa)
+    * Comando para a instalar o transpilador: npm install --save-dev babel-cli
+    * script no npm chamado build: "build": "./node_modules/.bin/babel --out-dir lib src"
+      - --out-dir: Será o diretório de saída
+      - lib: Nome do diretório de saída
+      - src: Os arquivos de entrada para transpilar
+    * Script build-watch: "npm run build -- --watch"
+      - Comando para assistir qualquer mudança e altera-los assim que for salvo
+    * Comando para instalar o "rimraf": npm install --save-dev rimraf
+      - Utilizado para limpar a pasta que no caso se chama lib, para evitar conflitos
 -- Fim do módulo 7
 
 -- Início do módulo 8: Refatorando uma Biblioteca com Testes
