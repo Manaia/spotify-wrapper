@@ -593,7 +593,16 @@
     * Script build-watch: "npm run build -- --watch"
       - Comando para assistir qualquer mudança e altera-los assim que for salvo
     * Comando para instalar o "rimraf": npm install --save-dev rimraf
-      - Utilizado para limpar a pasta que no caso se chama lib, para evitar conflitos
+      - Utilizado para limpar a pasta que no caso se chama lib, para evitar conflitos de versões transpiladas
+  
+  Aula 101 - Utilizando o Webpack para gerar a biblioteca em UMD
+    * Criando o arquivo de configuração chamado "webpack.config.babel"
+    * Instalando pacotes "babel-loader" e "webpack": npm install --save-dev webpack babel-loader 
+    * Criando os scripts para gerar o UMD:
+      - "build:umd": "./node_modules/.bin/webpack --output-filename spotify-wrapper.umd.js", 
+      - "build:umd:min": "./node_modules/.bin/webpack --output-filename spotify-wrapper.umd.min.js -p", 
+      - "build:all": "npm run build && npm run build:umd && npm run build:umd:min",
+
 -- Fim do módulo 7
 
 -- Início do módulo 8: Refatorando uma Biblioteca com Testes

@@ -7,9 +7,12 @@
     "clear": "rimraf lib",
     "pre-build": "./node_modules/.bin/babel --out-dir lib src",
     "build": "npm run clear && npm run pre-build",
-    "build-watch": "npm run clear && npm run pre-build -- --watch",
+    "build:watch": "npm run clear && npm run pre-build -- --watch",
+    "build:umd": "./node_modules/.bin/webpack --output-filename spotify-wrapper.umd.js", 
+    "build:umd:min": "./node_modules/.bin/webpack --output-filename spotify-wrapper.umd.min.js -p", 
+    "build:all": "npm run build && npm run build:umd && npm run build:umd:min", 
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "echo inserir o comando npm run lint nesse scrpit ARTHUR!",
+    "prepush": "echo inserir o comando npm run lint nesse script ARTHUR!",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
     "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
     "test:coverage": "nyc npm test"
@@ -44,6 +47,7 @@
   "homepage": "https://github.com/Manaia/spotify-wrapper#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
@@ -57,6 +61,8 @@
     "rimraf": "^2.6.2",
     "sinon": "^4.5.0",
     "sinon-chai": "^3.0.0",
-    "sinon-stub-promise": "^4.0.0"
+    "sinon-stub-promise": "^4.0.0",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0"
   }
 }
