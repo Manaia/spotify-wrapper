@@ -640,7 +640,14 @@
 
 -- Início do módulo 8: Refatorando uma Biblioteca com Testes
   Aula 108 - Refatorando para Classe/Construtor
-    *
+    * Primeiramente, criei um arquivo index.spec.js para realizar os testes.
+    * O primeiro teste foi realizado para verificar se o objeto spotify estava sendo instanciado como um objeto SpotifyWrapper
+    * Segundo teste foi realizado para verificar se a opção apiURL estava sendo recebida no objeto
+    * Terceiro teste foi para verificar se a apiURL não estivesse sendo recebida,  iria ser inserida o endereço api como default
+    * Quarto teste foi realizado para verificar se o token da API estava sendo recebida
+
+
+
 -- Fim do módulo 8
 
 -- Início do módulo 9: Criando um Player do Spotify
