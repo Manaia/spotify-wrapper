@@ -610,6 +610,9 @@
   Aula 103 - Criando uma documentação
     * Dicas de como criar uma documentação profissional para o projeto Spotify Wrapper
     * Atualizando os arquivos readme e contributing para a realidade do projeto
+
+  Aula 104 - Integrando com o Travis CI
+    * https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
 -- Fim do módulo 7
 
 -- Início do módulo 8: Refatorando uma Biblioteca com Testes
