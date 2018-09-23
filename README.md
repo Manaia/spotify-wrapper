@@ -17,7 +17,7 @@ This library depends on [fetch](https://fetch.spec.whatwg.org/) to make requests
 
 ## Installation
 ```sh
-$ npm install spotify-wrapper --save
+$ npm install spotify-w --save
 ```
 
 ## How to use

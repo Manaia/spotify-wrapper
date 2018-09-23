@@ -624,9 +624,16 @@
     * Criando tag de versão para o projeto (npm tag x.x.x)
     * Criando um array chamado files no package.json para selecionar os arquivos necessários para enviar o pacote ao npm
     * Comando para descompactar pasta (tar -xf nome_da_pasta)
+    * Publicando no npm (npm publish)
+
+  Aula 107 - Adicionando Token para autorização
+    * Capturar um token https://developer.spotify.com/console/get-several-albums/?ids=&market=
+    * Documentação de como ativar o oAuth https://developer.spotify.com/documentation/general/guides/authorization-guide/
 -- Fim do módulo 7
 
 -- Início do módulo 8: Refatorando uma Biblioteca com Testes
+  Aula 108 - Refatorando para Classe/Construtor
+    *
 -- Fim do módulo 8
 
 -- Início do módulo 9: Criando um Player do Spotify
