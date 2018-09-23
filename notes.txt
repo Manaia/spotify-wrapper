@@ -613,6 +613,13 @@
 
   Aula 104 - Integrando com o Travis CI
     * https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
+    * O Travis CI é um serviço de integração contínua distribuído hospedado, usado para criar e testar projetos de software hospedados no GitHub
+    * Nessa aula eu criei uma conta no travis, associei-a com o github e subi o projeto com as configurações presente no arquivo .travis.yml para a execução
+    * Também foi adicionada uma badge de build no readme do projeto
+    
+  Aula 105 - Integrando com o Coveralls
+    * 
+
 -- Fim do módulo 7
 
 -- Início do módulo 8: Refatorando uma Biblioteca com Testes
