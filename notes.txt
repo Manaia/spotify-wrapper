@@ -602,7 +602,10 @@
       - "build:umd": "./node_modules/.bin/webpack --output-filename spotify-wrapper.umd.js", 
       - "build:umd:min": "./node_modules/.bin/webpack --output-filename spotify-wrapper.umd.min.js -p", 
       - "build:all": "npm run build && npm run build:umd && npm run build:umd:min",
-
+  
+  Aula 102 - Criando um exemplo simples com a biblioteca em UMD
+    * Nessa aula fizemos uma chamada para a api e buscamos as imagens do album escolhido
+    * Em contrapartida, eu precisei adicionar um cabeçalho de autorização e criar um token na página da api do spotify
 -- Fim do módulo 7
 
 -- Início do módulo 8: Refatorando uma Biblioteca com Testes
