@@ -616,10 +616,14 @@
     * O Travis CI é um serviço de integração contínua distribuído hospedado, usado para criar e testar projetos de software hospedados no GitHub
     * Nessa aula eu criei uma conta no travis, associei-a com o github e subi o projeto com as configurações presente no arquivo .travis.yml para a execução
     * Também foi adicionada uma badge de build no readme do projeto
-    
+
   Aula 105 - Integrando com o Coveralls
     * 
 
+  Aula 106 - Publicando a biblioteca no NPM
+    * Criando tag de versão para o projeto (npm tag x.x.x)
+    * Criando um array chamado files no package.json para selecionar os arquivos necessários para enviar o pacote ao npm
+    * Comando para descompactar pasta (tar -xf nome_da_pasta)
 -- Fim do módulo 7
 
 -- Início do módulo 8: Refatorando uma Biblioteca com Testes
