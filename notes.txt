@@ -653,7 +653,11 @@
     * Terceiro teste verifica se a url passada como parametro no request é de fato a url passada
     * Quarto teste verifica se o headers com a configurações de authorization está sendo de fato passada
 
-
+  Aula 110 - Refatorando o método para Albums
+    * Já que estamos refatorando o modo de fazer um requisição, então foi refatorado também os métodos do albums
+    * Primeiramente foi-se feito uma brusca mudança no arquivo src/album.js
+    * Depois refatorei o arquivo de testes do tests/album.spec.js
+    
 -- Fim do módulo 8
 
 -- Início do módulo 9: Criando um Player do Spotify
