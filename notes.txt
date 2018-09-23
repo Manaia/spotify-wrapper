@@ -606,6 +606,10 @@
   Aula 102 - Criando um exemplo simples com a biblioteca em UMD
     * Nessa aula fizemos uma chamada para a api e buscamos as imagens do album escolhido
     * Em contrapartida, eu precisei adicionar um cabeçalho de autorização e criar um token na página da api do spotify
+
+  Aula 103 - Criando uma documentação
+    * Dicas de como criar uma documentação profissional para o projeto Spotify Wrapper
+    * Atualizando os arquivos readme e contributing para a realidade do projeto
 -- Fim do módulo 7
 
 -- Início do módulo 8: Refatorando uma Biblioteca com Testes
