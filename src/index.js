@@ -1,10 +1,4 @@
-import {
-  search,
-  searchArtists,
-  searchAlbums,
-  searchPlaylists,
-  searchTracks
-} from './search';
+import search from './search';
 
 import album from './album';
 
@@ -16,6 +10,7 @@ export default class SpotifyWrapper {
     this.token = options.token;
 
     this.album = album.bind(this)();
+    this.search = search.bind(this)();
   }
 
   request(url) {

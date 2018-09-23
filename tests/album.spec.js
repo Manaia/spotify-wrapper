@@ -25,15 +25,15 @@ describe('Album', () => {
   });
 
   describe('smoke tests', () => {
-    it('should have getAlbum method', () => {
+    it('should have spotify.album.getAlbum method', () => {
       expect(spotify.album.getAlbum).to.exist;
     });
 
-    it('should have getAlbums method', () => {
+    it('should have spotify.album.getAlbums method', () => {
       expect(spotify.album.getAlbums).to.exist;
     });
 
-    it('should have getAlbumTracks method', () => {
+    it('should have spotify.album.getTracks method', () => {
       expect(spotify.album.getTracks).to.exist;
     })
   });
