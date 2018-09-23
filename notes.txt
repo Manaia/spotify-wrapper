@@ -657,7 +657,16 @@
     * Já que estamos refatorando o modo de fazer um requisição, então foi refatorado também os métodos do albums
     * Primeiramente foi-se feito uma brusca mudança no arquivo src/album.js
     * Depois refatorei o arquivo de testes do tests/album.spec.js
-    
+
+  Aula 111 - Refatorando os métodos de Search
+    * Refatorado também os métodos do search semelhante ao albums
+    * Foi refatorado o arquivo de tests do search
+    * Refatorou também o exemplo no arquivo examples/albums.js
+  
+  Aula 112 - Atualizando Webpack para gerar UMD a partir de Classes
+    * Primeiramente criamos um arquivo na raiz do projeto chamado index.js
+    * Precisou-se fazer isso porque o webpack necessita de um export default da biblioteca para realzizar o building do UMD
+    * Refatoramos o exemplo html presente para a nova forma de se usar os métodos que foi refatorado anteriormente
 -- Fim do módulo 8
 
 -- Início do módulo 9: Criando um Player do Spotify
