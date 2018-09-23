@@ -618,7 +618,14 @@
     * Também foi adicionada uma badge de build no readme do projeto
 
   Aula 105 - Integrando com o Coveralls
-    * 
+    * https://coveralls.io
+    * Criei uma conta e integrei ela com o github
+    * Logo depois eu adicionei um token gerado pelo coveralls para adicionar ao travis
+    * Instalei o coveralls no projeto (npm install --save-dev coveralls)
+    * Criei um script chamado coveralls (npm run test:coverage && nyc report --reporter=text-lcov | coveralls)
+    * Adicionei ao .travis.yml esse comando coveralls no hook after_success
+    * Ao realizar o build no travis, voltei no coveralls e foi-me gerado uma badge
+    * Adicionei essa badge no readme do projeto
 
   Aula 106 - Publicando a biblioteca no NPM
     * Criando tag de versão para o projeto (npm tag x.x.x)
