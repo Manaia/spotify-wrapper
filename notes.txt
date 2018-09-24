@@ -670,6 +670,13 @@
 -- Fim do módulo 8
 
 -- Início do módulo 9: Criando um Player do Spotify
+  Aula 113 - Apresentando o Player Final
+    * Nesta aula foi mostrada o player que será desenvolvida no decorrer das aulas
+
+  Aula 114 - Mostrando o Markup Final da Aplicação
+    * Nesta aula foi mostrada o projeto final com as features utilizadas para desenvolver
+
+  Aula 115 - Configurando o Webpack-dev-server
 -- Fim do módulo 9
 
 -- Início do módulo 10: Criando uma CLI para Converter Bitcoin em Qualquer Moeda
